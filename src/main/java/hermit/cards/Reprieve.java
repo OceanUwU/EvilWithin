@@ -17,7 +17,6 @@ import hermit.patches.EndOfTurnPatch;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Reprieve extends AbstractDynamicCard {
@@ -31,8 +30,7 @@ public class Reprieve extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Reprieve.class.getSimpleName());
-    public static final String IMG = makeCardPath("reprieve.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -56,10 +54,9 @@ public class Reprieve extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Reprieve() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 12;
-        loadJokeCardImage(this, "reprieve.png");
-        this.tags.add(CardTags.HEALING);
+                this.tags.add(CardTags.HEALING);
         this.isEthereal = true;
         this.exhaust=true;
     }

@@ -12,7 +12,6 @@ import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Scavenge extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class Scavenge extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Scavenge.class.getSimpleName());
-    public static final String IMG = makeCardPath("scavenge.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -46,14 +44,13 @@ public class Scavenge extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Scavenge() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 5;
         this.exhaust=true;
         this.tags.add(Enums.DEADON);
         this.tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, "scavenge.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

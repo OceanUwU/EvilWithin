@@ -12,7 +12,6 @@ import hermit.HermitMod;
 import hermit.actions.MaliceAction;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
 // Skip this question until you start figuring out the AbstractDefaultCard/AbstractDynamicCard and just extend DynamicCard
@@ -37,8 +36,7 @@ public class Malice extends AbstractHermitCard {
     public static final String ID = HermitMod.makeID(Malice.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("malice.png");
-    // Setting the image as as easy as can possibly be now. You just need to provide the image name
+        // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
     // The list of all of them can be found in the main DefaultMod.java file in the
@@ -70,11 +68,10 @@ public class Malice extends AbstractHermitCard {
     // /STAT DECLARATION/
 
     public Malice() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-        loadJokeCardImage(this, "malice.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

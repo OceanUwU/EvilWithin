@@ -10,7 +10,6 @@ import hermit.actions.LoneWolfAction;
 import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class LoneWolf extends AbstractDynamicCard {
@@ -24,8 +23,7 @@ public class LoneWolf extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(LoneWolf.class.getSimpleName());
-    public static final String IMG = makeCardPath("lone_wolf.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -49,9 +47,8 @@ public class LoneWolf extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public LoneWolf() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        loadJokeCardImage(this, "lone_wolf.png");
-    }
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
+            }
 
     // Actions the card should do.
     @Override

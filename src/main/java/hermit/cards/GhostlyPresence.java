@@ -18,7 +18,6 @@ import hermit.powers.SnipePower;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class GhostlyPresence extends AbstractDynamicCard {
@@ -32,8 +31,7 @@ public class GhostlyPresence extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(GhostlyPresence.class.getSimpleName());
-    public static final String IMG = makeCardPath("ghostly_presence.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -52,12 +50,11 @@ public class GhostlyPresence extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public GhostlyPresence() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "ghostly_presence.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

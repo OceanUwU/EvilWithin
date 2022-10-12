@@ -23,7 +23,6 @@ import hermit.patches.EnumPatch;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Shortfuse extends AbstractDynamicCard {
@@ -37,8 +36,7 @@ public class Shortfuse extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Shortfuse.class.getSimpleName());
-    public static final String IMG = makeCardPath("short_fuse.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -59,10 +57,9 @@ public class Shortfuse extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Shortfuse() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        loadJokeCardImage(this, "short_fuse.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

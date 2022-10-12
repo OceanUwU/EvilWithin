@@ -16,7 +16,6 @@ import hermit.characters.hermit;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class FinalCanter extends AbstractDynamicCard {
@@ -30,8 +29,7 @@ public class FinalCanter extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FinalCanter.class.getSimpleName());
-    public static final String IMG = makeCardPath("final_canter.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -63,13 +61,12 @@ public class FinalCanter extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public FinalCanter() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=13;
         magicNumber = baseMagicNumber = 0;
         this.selfRetain = true;
         exhaust=true;
-        loadJokeCardImage(this, "final_canter.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

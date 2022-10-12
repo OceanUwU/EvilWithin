@@ -12,7 +12,6 @@ import hermit.HermitMod;
 import hermit.actions.CovetAction;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Covet extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class Covet extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Covet.class.getSimpleName());
-    public static final String IMG = makeCardPath("card_covet.png");
-
+    
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
@@ -47,10 +45,9 @@ public class Covet extends AbstractDynamicCard {
 
 
     public Covet() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, "covet.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

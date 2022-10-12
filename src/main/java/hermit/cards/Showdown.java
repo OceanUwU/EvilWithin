@@ -18,7 +18,6 @@ import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Showdown extends AbstractDynamicCard {
@@ -32,8 +31,7 @@ public class Showdown extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Showdown.class.getSimpleName());
-    public static final String IMG = makeCardPath("showdown.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -53,12 +51,11 @@ public class Showdown extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Showdown() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.selfRetain=true;
         this.exhaust=true;
-        loadJokeCardImage(this, "showdown.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

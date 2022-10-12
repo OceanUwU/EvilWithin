@@ -13,7 +13,6 @@ import hermit.actions.DeadManAction;
 import hermit.characters.hermit;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class DeadMansHand extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class DeadMansHand extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(DeadMansHand.class.getSimpleName());
-    public static final String IMG = makeCardPath("dead_mans_hand.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -46,10 +44,9 @@ public class DeadMansHand extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public DeadMansHand() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 3;
-        loadJokeCardImage(this, "dead_mans_hand.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -625,20 +625,6 @@ public class HermitMod implements
     }
 
 
-    public static void loadJokeCardImage(AbstractCard card, String img) {
-        if (card instanceof AbstractHermitCard) {
-            ((AbstractHermitCard) card).betaArtPath = img;
-        }
-        Texture cardTexture;
-        cardTexture = TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
-        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        int tw = cardTexture.getWidth();
-        int th = cardTexture.getHeight();
-        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
-        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
-    }
-
-
     // ================ /LOAD THE KEYWORDS/ ===================    
 
     // this adds "ModName:" before the ID of any card/relic/power etc.

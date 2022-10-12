@@ -15,7 +15,6 @@ import hermit.characters.hermit;
 import hermit.powers.Bruise;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class PistolWhip extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class PistolWhip extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(PistolWhip.class.getSimpleName());
-    public static final String IMG = makeCardPath("pistol_whip.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -51,11 +49,10 @@ public class PistolWhip extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public PistolWhip() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 3;
-        loadJokeCardImage(this, "pistol_whip.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

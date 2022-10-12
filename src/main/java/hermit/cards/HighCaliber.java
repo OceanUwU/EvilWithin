@@ -41,8 +41,7 @@ public class HighCaliber extends AbstractDynamicCard {
     public static final String ID = HermitMod.makeID(HighCaliber.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("high_caliber.png");
-    // Setting the image as as easy as can possibly be now. You just need to provide the image name
+        // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
     // The list of all of them can be found in the main DefaultMod.java file in the
@@ -76,13 +75,12 @@ public class HighCaliber extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public HighCaliber() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
         this.cardsToPreview = new Strike_Hermit();
         this.exhaust = true;
-        loadJokeCardImage(this, "heavy_caliber.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

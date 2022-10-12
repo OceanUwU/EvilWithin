@@ -17,7 +17,6 @@ import hermit.powers.SnipePower;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class EyeOfTheStorm extends AbstractDynamicCard {
@@ -31,8 +30,7 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(EyeOfTheStorm.class.getSimpleName());
-    public static final String IMG = makeCardPath("eye_of_the_storm.png");
-
+    
     // /TEXT DECLARATION/
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -51,11 +49,10 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public EyeOfTheStorm() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
         magicNumber=baseMagicNumber=0;
-        loadJokeCardImage(this, "eye_of_the_storm.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -22,8 +22,7 @@ public class Misfire extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Misfire.class.getSimpleName());
-    public static final String IMG = makeCardPath("misfire.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -44,11 +43,10 @@ public class Misfire extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Misfire() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.cardsToPreview = new Clumsy();
-        loadJokeCardImage(this, "misfire.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -19,7 +19,6 @@ import hermit.powers.SnipePower;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
 // Skip this question until you start figuring out the AbstractDefaultCard/AbstractDynamicCard and just extend DynamicCard
@@ -43,8 +42,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
     public static final String ID = HermitMod.makeID(ItchyTrigger.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("itchy_trigger.png");
-    // Setting the image as as easy as can possibly be now. You just need to provide the image name
+        // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
     // The list of all of them can be found in the main DefaultMod.java file in the
@@ -76,14 +74,13 @@ public class ItchyTrigger extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public ItchyTrigger() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
 
         this.tags.add(AbstractHermitCard.Enums.DEADON);
-        loadJokeCardImage(this, "itchy_trigger.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

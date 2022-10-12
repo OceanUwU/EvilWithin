@@ -14,7 +14,6 @@ import hermit.actions.ReduceDebuffsAction;
 import hermit.actions.ReprieveAction;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Virtue extends AbstractDynamicCard {
@@ -28,8 +27,7 @@ public class Virtue extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Virtue.class.getSimpleName());
-    public static final String IMG = makeCardPath("virtue.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -51,9 +49,8 @@ public class Virtue extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Virtue() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        loadJokeCardImage(this, "virtue.png");
-
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
+        
         this.selfRetain = true;
         magicNumber = baseMagicNumber = 1;
     }

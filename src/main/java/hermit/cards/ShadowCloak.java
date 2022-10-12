@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.ShadowCloakPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class ShadowCloak extends AbstractDynamicCard {
@@ -19,8 +18,7 @@ public class ShadowCloak extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(ShadowCloak.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow_cloak.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -43,11 +41,10 @@ public class ShadowCloak extends AbstractDynamicCard {
 
 
     public ShadowCloak() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        loadJokeCardImage(this, "shadow_cloak.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

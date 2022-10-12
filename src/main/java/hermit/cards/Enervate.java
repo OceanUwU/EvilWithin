@@ -15,7 +15,6 @@ import hermit.patches.EnumPatch;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Enervate extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class Enervate extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Enervate.class.getSimpleName());
-    public static final String IMG = makeCardPath("enervate.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -49,11 +47,10 @@ public class Enervate extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Enervate() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "enervate.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

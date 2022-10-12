@@ -22,7 +22,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Quickdraw extends AbstractDynamicCard {
@@ -36,8 +35,7 @@ public class Quickdraw extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Quickdraw.class.getSimpleName());
-    public static final String IMG = makeCardPath("card_quickdraw.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -60,11 +58,10 @@ public class Quickdraw extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Quickdraw() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
-        loadJokeCardImage(this, "quickdraw.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

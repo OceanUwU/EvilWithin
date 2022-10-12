@@ -15,7 +15,6 @@ import hermit.actions.LuckDrawAction;
 import hermit.characters.hermit;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class LuckOfTheDraw extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class LuckOfTheDraw extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(LuckOfTheDraw.class.getSimpleName());
-    public static final String IMG = makeCardPath("luck_of_the_draw.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -50,10 +48,9 @@ public class LuckOfTheDraw extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public LuckOfTheDraw() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 3;
-        loadJokeCardImage(this, "luck_of_the_draw.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

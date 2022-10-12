@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Defend_Hermit extends AbstractDynamicCard {
@@ -22,8 +21,7 @@ public class Defend_Hermit extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Defend_Hermit.class.getSimpleName());
-    public static final String IMG = makeCardPath("card_defend.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -43,12 +41,11 @@ public class Defend_Hermit extends AbstractDynamicCard {
 
 
     public Defend_Hermit() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
 
         this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
-        loadJokeCardImage(this, "defend.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

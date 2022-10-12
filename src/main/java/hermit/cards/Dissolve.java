@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Dissolve extends AbstractDynamicCard {
@@ -32,8 +31,7 @@ public class Dissolve extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Dissolve.class.getSimpleName());
-    public static final String IMG = makeCardPath("dissolve.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -57,13 +55,12 @@ public class Dissolve extends AbstractDynamicCard {
 
 
     public Dissolve() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         baseBlock = block = 12;
         this.exhaust=true;
         //this.cardsToPreview = new Decay();
-        loadJokeCardImage(this, "dissolve.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

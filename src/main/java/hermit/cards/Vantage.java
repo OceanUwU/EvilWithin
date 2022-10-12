@@ -12,7 +12,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Vantage extends AbstractDynamicCard {
@@ -27,8 +26,7 @@ public class Vantage extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Vantage.class.getSimpleName());
-    public static final String IMG = makeCardPath("vantage.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -53,12 +51,11 @@ public class Vantage extends AbstractDynamicCard {
 
 
     public Vantage() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber=magicNumber=2;
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "vantage.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

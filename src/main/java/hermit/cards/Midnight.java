@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Midnight extends AbstractDynamicCard {
@@ -25,8 +24,7 @@ public class Midnight extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Midnight.class.getSimpleName());
-    public static final String IMG = makeCardPath("midnight.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -52,12 +50,11 @@ public class Midnight extends AbstractDynamicCard {
 
 
     public Midnight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.cardsToPreview = new ImpendingDoom();
         this.isEthereal = true;
-        loadJokeCardImage(this, "midnight.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

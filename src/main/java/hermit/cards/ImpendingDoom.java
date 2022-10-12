@@ -17,7 +17,6 @@ import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class ImpendingDoom extends AbstractDynamicCard {
@@ -31,8 +30,7 @@ public class ImpendingDoom extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(ImpendingDoom.class.getSimpleName());
-    public static final String IMG = makeCardPath("impending_doom.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -53,11 +51,10 @@ public class ImpendingDoom extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public ImpendingDoom() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
-        loadJokeCardImage(this, "impending_doom.png");
-    }
+            }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {

@@ -16,7 +16,6 @@ import hermit.powers.Bruise;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Feint extends AbstractDynamicCard {
@@ -30,8 +29,7 @@ public class Feint extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Feint.class.getSimpleName());
-    public static final String IMG = makeCardPath("feint.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -55,11 +53,10 @@ public class Feint extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Feint() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 2;
         baseBlock = block = 3;
-        loadJokeCardImage(this, "feint.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -29,8 +29,7 @@ public class FullyLoaded extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FullyLoaded.class.getSimpleName());
-    public static final String IMG = makeCardPath("fully_loaded.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -56,12 +55,11 @@ public class FullyLoaded extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public FullyLoaded() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
         cardsList.add(new Strike_Hermit());
         cardsList.add(new Defend_Hermit());
-        loadJokeCardImage(this, "fully_loaded.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

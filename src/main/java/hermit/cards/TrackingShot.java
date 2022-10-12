@@ -16,7 +16,6 @@ import hermit.powers.Concentration;
 import hermit.powers.FatalDesirePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class TrackingShot extends AbstractDynamicCard {
@@ -30,8 +29,7 @@ public class TrackingShot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(TrackingShot.class.getSimpleName());
-    public static final String IMG = makeCardPath("tracking_shot.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -50,10 +48,9 @@ public class TrackingShot extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public TrackingShot() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        loadJokeCardImage(this, "tracking_shot.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

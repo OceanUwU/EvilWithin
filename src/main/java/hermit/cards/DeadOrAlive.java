@@ -13,7 +13,6 @@ import hermit.actions.DeadOrAliveAction;
 import hermit.characters.hermit;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class DeadOrAlive extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class DeadOrAlive extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(DeadOrAlive.class.getSimpleName());
-    public static final String IMG = makeCardPath("dead_or_alive.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -51,12 +49,11 @@ public class DeadOrAlive extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public DeadOrAlive() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = 8;
         this.exhaust=true;
         this.tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, "dead_or_alive.png");
-
+        
     }
 
     // Actions the card should do.

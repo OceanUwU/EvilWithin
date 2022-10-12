@@ -52,7 +52,6 @@ public abstract class AbstractHermitCard extends CustomCard {
 
     public AbstractHermitCard(final String id,
                               final String name,
-                              final String img,
                               final int cost,
                               final String rawDescription,
                               final CardType type,
@@ -60,7 +59,7 @@ public abstract class AbstractHermitCard extends CustomCard {
                               final CardRarity rarity,
                               final CardTarget target) {
 
-        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        super(id, name, "hermitResources/images/cards/" + id.replace(HermitMod.getModID() + ":", "") + ".png", cost, rawDescription, type, color, rarity, target);
 
         // Set all the things to their default values.
         isCostModified = false;
@@ -69,7 +68,6 @@ public abstract class AbstractHermitCard extends CustomCard {
         isBlockModified = false;
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
-
     }
 
     public void displayUpgrades() { // Display the upgrade - when you click a card to upgrade it
@@ -182,33 +180,8 @@ public abstract class AbstractHermitCard extends CustomCard {
         return do_times;
     }
 
-    public String betaArtPath;
-    @Override
-    protected Texture getPortraitImage() {
-        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
-            if (this.textureImg == null) {
-                return null;
-            } else {
-                if (betaArtPath != null) {
-                    int endingIndex = betaArtPath.lastIndexOf(".");
-                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
-                    newPath = "hermitResources/images/betacards/" + newPath;
-                    System.out.println("Finding texture: " + newPath);
-
-                    Texture portraitTexture;
-                    portraitTexture = TextureLoader.getTexture(newPath);
-
-                    return portraitTexture;
-                }
-            }
-        }
-        return super.getPortraitImage();
-    }
-
     public static class Enums {
         @SpireEnum
         public static AbstractCard.CardTags DEADON;
     }
-
-
 }

@@ -19,7 +19,6 @@ import hermit.patches.EnumPatch;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class CalledShot extends AbstractDynamicCard {
@@ -33,8 +32,7 @@ public class CalledShot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(CalledShot.class.getSimpleName());
-    public static final String IMG = makeCardPath("called_shot.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -53,12 +51,11 @@ public class CalledShot extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public CalledShot() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(Enums.DEADON);
         this.baseDamage=0;
         magicNumber=baseMagicNumber=1;
-        loadJokeCardImage(this, "called_shot.png");
-    }
+            }
 
     public void getMyName()
     {

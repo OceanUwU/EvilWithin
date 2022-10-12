@@ -12,7 +12,6 @@ import hermit.characters.hermit;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class TakeCover extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class TakeCover extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(TakeCover.class.getSimpleName());
-    public static final String IMG = makeCardPath("take_cover.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -51,11 +49,10 @@ public class TakeCover extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public TakeCover() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
         this.cardsToPreview = new Defend_Hermit();
-        loadJokeCardImage(this, "take_cover.png");
-
+        
     }
 
     // Actions the card should do.

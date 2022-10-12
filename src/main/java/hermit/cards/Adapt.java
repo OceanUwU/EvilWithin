@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.AdaptPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Adapt extends AbstractDynamicCard {
@@ -19,8 +18,7 @@ public class Adapt extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Adapt.class.getSimpleName());
-    public static final String IMG = makeCardPath("adapt.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -42,10 +40,9 @@ public class Adapt extends AbstractDynamicCard {
 
 
     public Adapt() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, "adapt.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

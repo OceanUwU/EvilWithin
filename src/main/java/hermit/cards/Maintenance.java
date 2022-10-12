@@ -33,8 +33,7 @@ public class Maintenance extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Maintenance.class.getSimpleName());
-    public static final String IMG = makeCardPath("maintenance.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -57,11 +56,10 @@ public class Maintenance extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Maintenance() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 3;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
-        loadJokeCardImage(this, "maintenance.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -19,7 +19,6 @@ import hermit.powers.Bruise;
 
 import javax.swing.*;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Ricochet extends AbstractDynamicCard {
@@ -33,8 +32,7 @@ public class Ricochet extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Ricochet.class.getSimpleName());
-    public static final String IMG = makeCardPath("ricochet.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -55,11 +53,10 @@ public class Ricochet extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Ricochet() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
-        loadJokeCardImage(this, "ricochet.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

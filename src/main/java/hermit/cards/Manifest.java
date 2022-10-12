@@ -11,7 +11,6 @@ import hermit.actions.ManifestAction;
 import hermit.characters.hermit;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Manifest extends AbstractDynamicCard {
@@ -25,8 +24,7 @@ public class Manifest extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Manifest.class.getSimpleName());
-    public static final String IMG = makeCardPath("manifest.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -50,11 +48,10 @@ public class Manifest extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Manifest() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 2;
         baseBlock = block = 13;
-        loadJokeCardImage(this, "manifest.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

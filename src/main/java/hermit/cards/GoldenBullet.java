@@ -18,7 +18,6 @@ import hermit.characters.hermit;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class GoldenBullet extends AbstractDynamicCard {
@@ -32,8 +31,7 @@ public class GoldenBullet extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(GoldenBullet.class.getSimpleName());
-    public static final String IMG = makeCardPath("golden_bullet.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -52,12 +50,11 @@ public class GoldenBullet extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public GoldenBullet() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         misc=0;
         this.exhaust=true;
-        loadJokeCardImage(this, "golden_bullet.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

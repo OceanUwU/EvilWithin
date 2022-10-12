@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
 // Skip this question until you start figuring out the AbstractDefaultCard/AbstractDynamicCard and just extend DynamicCard
@@ -40,8 +39,7 @@ public class HoleUp extends AbstractDynamicCard {
     public static final String ID = HermitMod.makeID(HoleUp.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("hole_up.png");
-    // Setting the image as as easy as can possibly be now. You just need to provide the image name
+        // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
     // The list of all of them can be found in the main DefaultMod.java file in the
@@ -73,14 +71,13 @@ public class HoleUp extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public HoleUp() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseBlock = BLOCK;
 
         baseMagicNumber = magicNumber = 2;
 
-        loadJokeCardImage(this, "hole_up.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

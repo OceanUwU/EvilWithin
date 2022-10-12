@@ -23,7 +23,6 @@ import hermit.powers.Drained;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class NoHoldsBarred extends AbstractDynamicCard {
@@ -38,8 +37,7 @@ public class NoHoldsBarred extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(NoHoldsBarred.class.getSimpleName());
-    public static final String IMG = makeCardPath("no_holds_barred.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -62,12 +60,11 @@ public class NoHoldsBarred extends AbstractDynamicCard {
 
 
     public NoHoldsBarred() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         isMultiDamage=true;
         baseDamage=18;
         magicNumber = baseMagicNumber = 4;
-        loadJokeCardImage(this, "no_holds_barred.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

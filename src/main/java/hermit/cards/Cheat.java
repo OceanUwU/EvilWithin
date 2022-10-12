@@ -13,7 +13,6 @@ import hermit.characters.hermit;
 import hermit.powers.Concentration;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Cheat extends AbstractDynamicCard {
@@ -27,8 +26,7 @@ public class Cheat extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Cheat.class.getSimpleName());
-    public static final String IMG = makeCardPath("cheat.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -45,12 +43,11 @@ public class Cheat extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Cheat() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 3;
         //this.cardsToPreview = new Shame();
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "cheat.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

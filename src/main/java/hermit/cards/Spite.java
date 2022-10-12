@@ -18,7 +18,6 @@ import hermit.actions.SpiteAction;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Spite extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class Spite extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Spite.class.getSimpleName());
-    public static final String IMG = makeCardPath("spite.png");
-
+    
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
@@ -47,11 +45,10 @@ public class Spite extends AbstractDynamicCard {
 
 
     public Spite() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage=5;
         magicNumber=baseMagicNumber=2;
-        loadJokeCardImage(this, "spite.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -15,7 +15,6 @@ import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Headshot extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class Headshot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Headshot.class.getSimpleName());
-    public static final String IMG = makeCardPath("headshot.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -49,11 +47,10 @@ public class Headshot extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Headshot() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "headshot.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

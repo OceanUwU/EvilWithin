@@ -14,7 +14,6 @@ import hermit.HermitMod;
 import hermit.actions.BodyArmorAction;
 import hermit.characters.hermit;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class BodyArmor extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class BodyArmor extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(BodyArmor.class.getSimpleName());
-    public static final String IMG = makeCardPath("body_armor.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -55,10 +53,9 @@ public class BodyArmor extends AbstractDynamicCard {
 
 
     public BodyArmor() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        loadJokeCardImage(this, "body_armor.png");
-    }
+            }
 
     /*
     // Actions the card should do.

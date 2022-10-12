@@ -18,7 +18,6 @@ import hermit.characters.hermit;
 import hermit.powers.EternalPower;
 import hermit.powers.OverwhelmingPowerPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class OverwhelmingPower extends AbstractDynamicCard {
@@ -27,8 +26,7 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(OverwhelmingPower.class.getSimpleName());
-    public static final String IMG = makeCardPath("overwhelming_power.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -48,10 +46,9 @@ public class OverwhelmingPower extends AbstractDynamicCard {
 
 
     public OverwhelmingPower() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
-        loadJokeCardImage(this, "overwhelming_power.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

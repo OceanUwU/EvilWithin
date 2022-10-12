@@ -15,7 +15,6 @@ import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class WideOpen extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class WideOpen extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(WideOpen.class.getSimpleName());
-    public static final String IMG = makeCardPath("wide_open.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -51,11 +49,10 @@ public class WideOpen extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public WideOpen() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, "wide_open.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

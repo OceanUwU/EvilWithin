@@ -13,7 +13,6 @@ import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class BlackWind extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class BlackWind extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(BlackWind.class.getSimpleName());
-    public static final String IMG = makeCardPath("black_wind.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -47,12 +45,11 @@ public class BlackWind extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public BlackWind() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=0;
         this.isEthereal = true;
         this.exhaust = true;
-        loadJokeCardImage(this, "black_wind.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

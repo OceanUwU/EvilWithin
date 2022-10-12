@@ -13,7 +13,6 @@ import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class SprayPray extends AbstractDynamicCard {
@@ -24,8 +23,7 @@ public class SprayPray extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(SprayPray.class.getSimpleName());
-    public static final String IMG = makeCardPath("spray_and_pray.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -46,11 +44,10 @@ public class SprayPray extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public SprayPray() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.cardsToPreview = new Doubt();
-        loadJokeCardImage(this, "spray_and_pray.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

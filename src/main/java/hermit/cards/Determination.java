@@ -11,7 +11,6 @@ import hermit.characters.hermit;
 import hermit.powers.DeterminationPower;
 import hermit.powers.EternalPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Determination extends AbstractDynamicCard {
@@ -20,8 +19,7 @@ public class Determination extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Determination.class.getSimpleName());
-    public static final String IMG = makeCardPath("determination.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,9 +39,8 @@ public class Determination extends AbstractDynamicCard {
 
 
     public Determination() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        loadJokeCardImage(this, "determination.png");
-    }
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
+            }
 
     // Actions the card should do.
     @Override

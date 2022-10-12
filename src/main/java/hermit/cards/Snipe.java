@@ -20,8 +20,7 @@ public class Snipe extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Snipe.class.getSimpleName());
-    public static final String IMG = makeCardPath("snipe.png");
-
+    
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
@@ -43,10 +42,9 @@ public class Snipe extends AbstractDynamicCard {
 
 
     public Snipe() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = SnipeAmount;
-        loadJokeCardImage(this, "snipe.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

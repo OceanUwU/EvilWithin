@@ -11,7 +11,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.BrawlPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Brawl extends AbstractDynamicCard {
@@ -20,8 +19,7 @@ public class Brawl extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Brawl.class.getSimpleName());
-    public static final String IMG = makeCardPath("brawl.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -43,11 +41,10 @@ public class Brawl extends AbstractDynamicCard {
 
 
     public Brawl() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        loadJokeCardImage(this, "brawl.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

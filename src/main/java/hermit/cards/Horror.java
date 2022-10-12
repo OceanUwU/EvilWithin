@@ -15,7 +15,6 @@ import hermit.powers.HorrorPower;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Horror extends AbstractDynamicCard {
@@ -30,8 +29,7 @@ public class Horror extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Horror.class.getSimpleName());
-    public static final String IMG = makeCardPath("horror.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -54,11 +52,10 @@ public class Horror extends AbstractDynamicCard {
 
 
     public Horror() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber=magicNumber=3;
         defaultBaseSecondMagicNumber=defaultSecondMagicNumber=2;
-        loadJokeCardImage(this, "horror.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

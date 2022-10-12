@@ -20,15 +20,13 @@ import hermit.HermitMod;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class MementoCard extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(MementoCard.class.getSimpleName());
-    public static final String IMG = makeCardPath("memento.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -48,10 +46,10 @@ public class MementoCard extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public MementoCard() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.selfRetain = true;
-        loadJokeCardImage(this, "memento.png");
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,7 +14,6 @@ import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Deadeye extends AbstractDynamicCard {
@@ -28,8 +27,7 @@ public class Deadeye extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Deadeye.class.getSimpleName());
-    public static final String IMG = makeCardPath("deadeye.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -49,12 +47,11 @@ public class Deadeye extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Deadeye() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(Enums.DEADON);
         magicNumber = baseMagicNumber = 2;
-        loadJokeCardImage(this, "deadeye.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

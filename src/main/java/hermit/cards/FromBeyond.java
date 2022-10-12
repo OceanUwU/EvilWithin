@@ -13,7 +13,6 @@ import hermit.actions.FromBeyondAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class FromBeyond extends AbstractDynamicCard {
@@ -27,8 +26,7 @@ public class FromBeyond extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FromBeyond.class.getSimpleName());
-    public static final String IMG = makeCardPath("from_beyond.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -52,9 +50,8 @@ public class FromBeyond extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public FromBeyond() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        loadJokeCardImage(this, "from_beyond.png");
-        magicNumber= baseMagicNumber=5;
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
+                magicNumber= baseMagicNumber=5;
     }
 
     // Actions the card should do.

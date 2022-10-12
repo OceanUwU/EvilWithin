@@ -30,8 +30,7 @@ public class CursedWeapon extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(CursedWeapon.class.getSimpleName());
-    public static final String IMG = makeCardPath("cursed_weapon.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -51,13 +50,12 @@ public class CursedWeapon extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public CursedWeapon() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = this.baseMagicNumber = 4;
         misc = this.baseDamage;
         this.exhaust=true;
-        loadJokeCardImage(this, "cursed_weapon.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

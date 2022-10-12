@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.BigShotPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class BigShot extends AbstractDynamicCard {
@@ -19,8 +18,7 @@ public class BigShot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(BigShot.class.getSimpleName());
-    public static final String IMG = makeCardPath("smoking_barrel.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,10 +39,9 @@ public class BigShot extends AbstractDynamicCard {
 
 
     public BigShot() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 4;
-        loadJokeCardImage(this, "smoking_barrel.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

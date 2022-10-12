@@ -12,7 +12,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
 // Skip this question until you start figuring out the AbstractDefaultCard/AbstractDynamicCard and just extend DynamicCard
@@ -37,8 +36,7 @@ public class Strike_Hermit extends AbstractHermitCard {
     public static final String ID = HermitMod.makeID(Strike_Hermit.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("card_strike.png");
-    // Setting the image as as easy as can possibly be now. You just need to provide the image name
+        // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
     // The list of all of them can be found in the main DefaultMod.java file in the
@@ -70,7 +68,7 @@ public class Strike_Hermit extends AbstractHermitCard {
     // /STAT DECLARATION/
 
     public Strike_Hermit() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         // Aside from baseDamage/MagicNumber/Block there's also a few more.
         // Just type this.base and let intelliJ auto complete for you, or, go read up AbstractCard
@@ -80,8 +78,7 @@ public class Strike_Hermit extends AbstractHermitCard {
          //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, "strike.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

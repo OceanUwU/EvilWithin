@@ -14,7 +14,6 @@ import hermit.characters.hermit;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class FlashPowder extends AbstractDynamicCard {
@@ -29,8 +28,7 @@ public class FlashPowder extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FlashPowder.class.getSimpleName());
-    public static final String IMG = makeCardPath("flash_powder.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -54,12 +52,11 @@ public class FlashPowder extends AbstractDynamicCard {
 
 
     public FlashPowder() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber=magicNumber=1;
         this.exhaust=true;
-        loadJokeCardImage(this, "flash_powder.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -12,7 +12,6 @@ import hermit.powers.Concentration;
 import hermit.powers.ShadowCloakPower;
 import hermit.powers.TakeAimPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class TakeAim extends AbstractDynamicCard {
@@ -21,8 +20,7 @@ public class TakeAim extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(TakeAim.class.getSimpleName());
-    public static final String IMG = makeCardPath("take_aim.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -45,11 +43,10 @@ public class TakeAim extends AbstractDynamicCard {
 
 
     public TakeAim() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        loadJokeCardImage(this, "take_aim.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

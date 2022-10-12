@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.ComboPower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Combo extends AbstractDynamicCard {
@@ -19,8 +18,7 @@ public class Combo extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Combo.class.getSimpleName());
-    public static final String IMG = makeCardPath("combo.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,9 +39,8 @@ public class Combo extends AbstractDynamicCard {
 
 
     public Combo() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        loadJokeCardImage(this, "combo.png");
-    }
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
+            }
 
     // Actions the card should do.
     @Override

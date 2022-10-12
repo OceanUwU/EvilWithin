@@ -12,7 +12,6 @@ import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Dive extends AbstractDynamicCard {
@@ -26,8 +25,7 @@ public class Dive extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Dive.class.getSimpleName());
-    public static final String IMG = makeCardPath("dive.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -46,12 +44,11 @@ public class Dive extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Dive() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 1;
         this.tags.add(Enums.DEADON);
-        loadJokeCardImage(this, "dive.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

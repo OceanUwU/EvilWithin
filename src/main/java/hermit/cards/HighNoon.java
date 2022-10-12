@@ -16,7 +16,6 @@ import hermit.powers.ShadowCloakPower;
 
 import java.util.ArrayList;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class HighNoon extends AbstractDynamicCard {
@@ -25,8 +24,7 @@ public class HighNoon extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(HighNoon.class.getSimpleName());
-    public static final String IMG = makeCardPath("high_noon.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -52,11 +50,10 @@ public class HighNoon extends AbstractDynamicCard {
 
 
     public HighNoon() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         cardsList.add(new Strike_Hermit());
         cardsList.add(new Defend_Hermit());
-        loadJokeCardImage(this, "high_noon.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

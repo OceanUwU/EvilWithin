@@ -20,7 +20,6 @@ import hermit.powers.Bruise;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class RoundhouseKick extends AbstractDynamicCard {
@@ -35,8 +34,7 @@ public class RoundhouseKick extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(RoundhouseKick.class.getSimpleName());
-    public static final String IMG = makeCardPath("roundhouse_kick.png");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -59,12 +57,11 @@ public class RoundhouseKick extends AbstractDynamicCard {
 
 
     public RoundhouseKick() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         isMultiDamage=true;
         baseDamage=13;
         exhaust=true;
-        loadJokeCardImage(this, "roundhouse_kick.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

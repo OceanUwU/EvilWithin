@@ -11,7 +11,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.FatalDesirePower;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class FatalDesire extends AbstractDynamicCard {
@@ -20,8 +19,7 @@ public class FatalDesire extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FatalDesire.class.getSimpleName());
-    public static final String IMG = makeCardPath("fatal_desire.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,11 +39,10 @@ public class FatalDesire extends AbstractDynamicCard {
 
 
     public FatalDesire() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
 
         this.cardsToPreview = new Injury();
-        loadJokeCardImage(this, "fatal_desire.png");
-    }
+            }
 
     // Actions the card should do.
     @Override

@@ -20,7 +20,6 @@ import hermit.patches.EnumPatch;
 
 import java.util.Iterator;
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Grudge extends AbstractDynamicCard {
@@ -31,8 +30,7 @@ public class Grudge extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Grudge.class.getSimpleName());
-    public static final String IMG = makeCardPath("grudge.png");
-
+    
     // /TEXT DECLARATION/
 
 
@@ -53,11 +51,10 @@ public class Grudge extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
     public Grudge() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 2;
-        loadJokeCardImage(this, "grudge.png");
-        isMultiDamage=true;
+                isMultiDamage=true;
     }
 
     // Actions the card should do.

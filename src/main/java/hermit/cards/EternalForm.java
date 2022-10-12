@@ -11,7 +11,6 @@ import hermit.characters.hermit;
 import hermit.powers.EternalPower;
 
 
-import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class EternalForm extends AbstractDynamicCard {
@@ -20,8 +19,7 @@ public class EternalForm extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(EternalForm.class.getSimpleName());
-    public static final String IMG = makeCardPath("eternal_form.png");
-
+    
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,11 +39,10 @@ public class EternalForm extends AbstractDynamicCard {
 
 
     public EternalForm() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 1;
         this.isEthereal = true;
-        loadJokeCardImage(this, "eternal_form.png");
-    }
+            }
 
     // Actions the card should do.
     @Override
